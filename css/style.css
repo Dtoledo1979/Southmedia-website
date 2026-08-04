@@ -181,7 +181,6 @@ section.tight{padding:64px 0;}
   aspect-ratio:4/3;padding:20px;
 }
 img.ph{display:block;width:100%;height:100%;}
-.artist .ph.ph{aspect-ratio:1;}
 .ph.tall{aspect-ratio:3/4;}
 .ph.wide{aspect-ratio:16/9;}
 
@@ -221,8 +220,8 @@ img.ph{display:block;width:100%;height:100%;}
 @media (max-width:560px){.process{grid-template-columns:1fr;}}
 
 /* Artist card */
-.artist{background:var(--bg-card);border:1px solid var(--line);}
-.artist .ph{aspect-ratio:1;max-width:280px;margin:0 auto;}
+.artist{background:var(--bg-card);border:1px solid var(--line);margin-bottom:4px;}
+.artist .ph{aspect-ratio:4/3;}
 .artist-info{padding:26px;}
 .artist-info .role{font-family:var(--font-mono);font-size:.74rem;color:var(--lime);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;}
 .artist-info h3{font-size:1.4rem;}
