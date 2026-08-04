@@ -96,7 +96,7 @@ header.site{
 }
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:var(--container);margin:0 auto;}
 .nav .brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.nav .brand img{height:34px;width:auto;}
+.nav .brand img{height:46px;width:auto;}
 .nav .brand-text{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.1em;color:var(--ivory);text-transform:uppercase;}
 .nav .brand-text b{color:var(--lime);}
 .nav ul{list-style:none;display:flex;gap:30px;margin:0;padding:0;}
@@ -222,7 +222,7 @@ img.ph{display:block;width:100%;height:100%;}
 
 /* Artist card */
 .artist{background:var(--bg-card);border:1px solid var(--line);}
-.artist .ph{aspect-ratio:1;}
+.artist .ph{aspect-ratio:1;max-width:280px;margin:0 auto;}
 .artist-info{padding:26px;}
 .artist-info .role{font-family:var(--font-mono);font-size:.74rem;color:var(--lime);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;}
 .artist-info h3{font-size:1.4rem;}
@@ -257,7 +257,9 @@ footer{padding:56px 0 34px;}
 .footer-grid h4{font-family:var(--font-mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ivory-dim);margin-bottom:16px;}
 .footer-grid a{display:block;text-decoration:none;color:var(--ivory-dim);font-size:.92rem;margin-bottom:10px;transition:color .15s ease;}
 .footer-grid a:hover{color:var(--lime);}
-.footer-brand p{max-width:34ch;}
+.footer-brand{text-align:center;}
+.footer-brand img{display:block;margin:0 auto 20px;}
+.footer-brand p{max-width:34ch;margin-left:auto;margin-right:auto;}
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
   border-top:1px solid var(--line);padding-top:24px;font-family:var(--font-mono);font-size:.72rem;color:var(--ivory-dim);}
 @media (max-width:700px){.footer-grid{grid-template-columns:1fr;}}
