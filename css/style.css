@@ -115,7 +115,6 @@ header.site::before{
   transition:color .15s ease, border-color .15s ease;
 }
 .nav ul a:hover, .nav ul a.active{color:var(--lime);border-color:var(--lime);}
-.nav-cta{display:none;}
 .burger{display:none;background:none;border:none;color:var(--ivory);font-size:1.6rem;cursor:pointer;width:44px;height:44px;}
 
 @media (max-width:900px){
@@ -284,10 +283,14 @@ footer{padding:56px 0 34px;}
 .footer-brand p{max-width:34ch;margin-left:auto;margin-right:auto;}
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
   border-top:1px solid var(--line);padding-top:24px;font-family:var(--font-mono);font-size:.72rem;color:var(--ivory-dim);}
-@media (max-width:700px){.footer-grid{grid-template-columns:1fr;}}
+@media (max-width:700px){
+  .footer-grid{grid-template-columns:1fr;}
+  .footer-grid a,.footer-grid .foot-loc{padding:8px 0;margin-bottom:2px;}
+}
 
 .page-hero{padding:150px 0 70px;border-bottom:1px solid var(--line);}
 .page-hero h1{font-size:clamp(2rem,4.6vw,3.4rem);max-width:16ch;}
+@media (max-width:600px){.page-hero{padding:116px 0 56px;}}
 
 .social-icon{
   width:42px;height:42px;border:1px solid var(--line);
