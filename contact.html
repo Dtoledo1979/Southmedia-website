@@ -4,17 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — South Media Group</title>
-<meta name="description" content="Contact South Media Group for DJ and event production in Christchurch, NZ. We reply within 24 hours with a real quote for your event.">
+<meta name="description" content="Contact South Media Group for DJ and event production in Christchurch, NZ. We reply within 48 hours with a real quote for your event.">
+<link rel="canonical" href="https://southmedia.co.nz/contact">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="South Media Group">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:url" content="https://southmedia.co.nz/contact">
+<meta property="og:title" content="Contact — South Media Group">
+<meta property="og:description" content="Contact South Media Group for DJ and event production in Christchurch, NZ. We reply within 48 hours with a real quote for your event.">
+<meta property="og:image" content="https://southmedia.co.nz/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="South Media Group — DJs and event production in Christchurch, New Zealand">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0b0b0d">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="site">
   <nav class="nav">
     <a href="index.html" class="brand">
-      <img src="assets/logo-star.png" alt="South Media Group">
+      <img src="assets/logo-star-128.png" alt="" width="46" height="46">
       <span class="brand-text">SOUTH MEDIA <b>GROUP</b></span>
     </a>
     <ul id="navList">
@@ -24,11 +43,11 @@
       <li><a href="djs.html">DJs</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
-    <button class="burger" id="burgerBtn" aria-label="Open menu">☰</button>
+    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-controls="navList" aria-expanded="false">☰</button>
   </nav>
 </header>
 
-<main>
+<main id="main">
   <section class="page-hero" style="padding-bottom:0;border-bottom:none;">
     <div class="wrap">
       <div class="eyebrow">Contact</div>
@@ -41,7 +60,7 @@
     <div class="wrap">
       <div class="grid-2" style="align-items:start;">
 
-        <form class="card-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+        <form class="card-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks">
           <input type="hidden" name="form-name" value="contact">
           <p style="display:none;">
             <label>Don't fill this out: <input name="bot-field"></label>
@@ -50,18 +69,18 @@
           <div class="form-row">
             <div class="field">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="name" autocomplete="name" maxlength="120" required>
             </div>
             <div class="field">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" autocomplete="email" maxlength="160" required>
             </div>
           </div>
 
           <div class="form-row">
             <div class="field">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone">
+              <label for="phone">Phone <span class="opt">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="40">
             </div>
             <div class="field">
               <label for="type">Event type</label>
@@ -75,17 +94,47 @@
             </div>
           </div>
 
-          <div class="field">
-            <label for="date">Event date (approx.)</label>
-            <input type="text" id="date" name="date" placeholder="E.g. March 14, 2027">
+          <div class="form-row">
+            <div class="field">
+              <label for="package">Package of interest <span class="opt">(optional)</span></label>
+              <select id="package" name="package">
+                <option value="">Not sure yet</option>
+                <optgroup label="Corporate">
+                  <option value="corporate-essential">Essential</option>
+                  <option value="corporate-signature">Signature</option>
+                  <option value="corporate-premier">Premier</option>
+                </optgroup>
+                <optgroup label="Weddings">
+                  <option value="wedding-basic">Basic</option>
+                  <option value="wedding-themed">Themed</option>
+                  <option value="wedding-vip">VIP</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="field">
+              <label for="date">Event date (approx.)</label>
+              <input type="text" id="date" name="date" maxlength="60" placeholder="E.g. March 14, 2027">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="guests">Guest count <span class="opt">(approx.)</span></label>
+              <input type="number" id="guests" name="guests" min="1" max="20000" inputmode="numeric" placeholder="E.g. 120">
+            </div>
+            <div class="field">
+              <label for="venue">Venue / town</label>
+              <input type="text" id="venue" name="venue" maxlength="120" placeholder="E.g. Christchurch">
+            </div>
           </div>
 
           <div class="field">
             <label for="message">Message</label>
-            <textarea id="message" name="message" required placeholder="Tell us about your event: venue, guest count, style you're going for..."></textarea>
+            <textarea id="message" name="message" maxlength="4000" required placeholder="Tell us about your event: the style you're going for, key moments, music you love..."></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send request →</button>
+          <button type="submit" class="btn btn-primary btn-block">Send request →</button>
+          <p class="form-note">We only use your details to reply to this enquiry. See our <a href="privacy.html">privacy policy</a>.</p>
         </form>
 
         <div>
@@ -122,12 +171,13 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo-star.png" alt="South Media Group" style="height:52px;display:block;margin:0 auto 10px;">
-        <div class="brand-text" style="justify-content:center;margin-bottom:14px;font-size:.9rem;">SOUTH MEDIA <b>GROUP</b></div>
-        <p>Event production, DJs and Latin Experience in Christchurch, New Zealand. Since 2016.</p>
+        <img src="assets/logo-star-128.png" alt="" width="52" height="52" loading="lazy">
+        <div class="brand-text">SOUTH MEDIA <b>GROUP</b></div>
+        <p>DJ entertainment, event production and cultural programming in Christchurch, New Zealand. Since 2016.</p>
       </div>
       <div>
         <h4>Navigation</h4>
+        <a href="index.html">Home</a>
         <a href="corporate.html">Corporate</a>
         <a href="weddings.html">Weddings</a>
         <a href="djs.html">DJs</a>
@@ -137,16 +187,19 @@
         <h4>Contact</h4>
         <a href="mailto:info@southmedia.co.nz">info@southmedia.co.nz</a>
         <a href="tel:+64274539823">027 453 9823</a>
-        <a href="#">Christchurch, New Zealand</a>
+        <span class="foot-loc">Christchurch, New Zealand</span>
+        <a href="https://www.instagram.com/southmedianz" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/southmedianz" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 South Media Group Ltd</span>
+      <span>© <span id="year">2026</span> South Media Group Ltd · <a href="privacy.html">Privacy</a></span>
       <span>DJ D'Latino · DJ MJ</span>
     </div>
   </div>
 </footer>
 
+<script src="js/analytics.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
