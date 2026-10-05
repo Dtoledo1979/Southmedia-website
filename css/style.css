@@ -82,6 +82,7 @@ p{margin:0 0 1em;color:var(--ivory-dim);}
 .eq-divider span:nth-child(5){height:35%;animation-delay:.6s;}
 .eq-divider span:nth-child(6){height:70%;animation-delay:.75s;}
 .eq-divider span:nth-child(7){height:50%;animation-delay:.9s;}
+.eq-divider.flush{margin:0;}
 @keyframes eqbounce{
   0%,100%{transform:scaleY(1);}
   50%{transform:scaleY(.35);}
@@ -137,7 +138,7 @@ main{padding-top:var(--header-h);}
     radial-gradient(ellipse at 20% 0%, rgba(168,224,32,0.10), transparent 55%),
     radial-gradient(ellipse at 90% 100%, rgba(201,168,104,0.08), transparent 50%),
     var(--bg);
-  border-bottom:1px solid var(--line);
+  border-bottom:none;
 }
 .hero .wrap{padding-top:60px;padding-bottom:60px;}
 .hero h1{font-size:clamp(2.4rem,5.6vw,4.6rem);line-height:1.02;max-width:15ch;}
@@ -170,11 +171,15 @@ main{padding-top:var(--header-h);}
 /* ---------- Sections ---------- */
 section{padding:96px 0;border-bottom:1px solid var(--line);}
 section.tight{padding:64px 0;}
+section.no-rule{border-bottom:none;}
+section.artists{padding-bottom:150px;}
+section.after-divider{padding-top:60px;}
 .section-head{max-width:640px;margin-bottom:52px;}
 .section-head h2{font-size:clamp(1.8rem,3.4vw,2.6rem);}
 
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.grid-2.top{align-items:start;}
 @media (max-width:860px){
   .grid-3{grid-template-columns:1fr;}
   .grid-2{grid-template-columns:1fr;gap:32px;}
@@ -206,6 +211,9 @@ img.ph{display:block;width:100%;height:100%;object-fit:cover;border:none;padding
 .spotlight cite{font-family:var(--font-mono);font-size:.78rem;color:var(--lime);font-style:normal;letter-spacing:.06em;text-transform:uppercase;}
 
 .logos-row{display:flex;flex-wrap:wrap;gap:16px 34px;align-items:center;margin-top:36px;}
+.trust-note{margin-top:28px;font-size:.92rem;}
+.trust-note strong{color:var(--ivory);}
+.trust-cities{font-size:.86rem;}
 .logos-row span{font-family:var(--font-mono);font-size:.82rem;letter-spacing:.06em;color:var(--ivory-dim);border:1px solid var(--line);padding:10px 16px;}
 
 /* Package / pricing cards */
@@ -263,10 +271,11 @@ select option{background:var(--bg-card);}
 /* Final CTA band */
 .cta-band{
   background:linear-gradient(120deg, rgba(168,224,32,0.10), rgba(11,11,13,0));
-  text-align:center;padding:90px 24px;border-bottom:none;
+  text-align:center;padding:90px 24px;
 }
 .cta-band h2{font-size:clamp(1.8rem,4vw,2.8rem);max-width:20ch;margin:0 auto 26px;}
 .cta-band .hero-actions{justify-content:center;margin-bottom:0;}
+.cta-band .eyebrow{justify-content:center;}
 
 /* Footer */
 footer{padding:56px 0 34px;}
@@ -290,7 +299,26 @@ footer{padding:56px 0 34px;}
 
 .page-hero{padding:150px 0 70px;border-bottom:1px solid var(--line);}
 .page-hero h1{font-size:clamp(2rem,4.6vw,3.4rem);max-width:16ch;}
+.page-hero .lede{max-width:54ch;}
+.page-hero.flush{padding-bottom:0;border-bottom:none;}
+
+/* Centered confirmation pages (thanks, 404) */
+.center-hero{text-align:center;min-height:70vh;display:flex;align-items:center;}
+.center-hero h1{max-width:none;}
+.center-hero .lede{max-width:48ch;margin:0 auto 32px;}
+.center-hero .eyebrow,.center-hero .hero-actions{justify-content:center;}
+.lede a{color:var(--lime);}
 @media (max-width:600px){.page-hero{padding:116px 0 56px;}}
+
+/* Contact page aside */
+.hp{display:none;}
+.contact-direct h2{font-size:1.8rem;}
+.contact-direct > p{margin-bottom:28px;}
+.contact-lines{font-family:var(--font-mono);font-size:.95rem;line-height:2.2;}
+.contact-lines .accent{color:var(--lime);}
+.socials{display:flex;gap:14px;margin-top:24px;}
+.map-embed{margin-top:32px;aspect-ratio:16/9;border:1px solid var(--line);overflow:hidden;}
+.map-embed iframe{display:block;width:100%;height:100%;border:0;filter:invert(90%) hue-rotate(180deg) contrast(90%);}
 
 .social-icon{
   width:42px;height:42px;border:1px solid var(--line);
@@ -308,3 +336,10 @@ footer{padding:56px 0 34px;}
 .prose{max-width:70ch;}
 .prose h2{font-size:1.4rem;margin-top:2em;}
 .prose a{color:var(--lime);}
+
+/* Weddings page: gold accent */
+.page-wed .page-hero{background:radial-gradient(ellipse at 80% 0%, rgba(201,168,104,0.12), transparent 55%), var(--bg);}
+.page-wed .eyebrow,.page-wed .pkg .pkg-tag{color:var(--gold);}
+.page-wed .eyebrow::before{background:var(--gold);}
+.page-wed .pkg.featured{border-color:var(--gold);}
+.page-wed .cta-band{background:linear-gradient(120deg, rgba(201,168,104,0.12), rgba(11,11,13,0));}

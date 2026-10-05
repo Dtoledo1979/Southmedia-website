@@ -51,21 +51,21 @@
 </header>
 
 <main id="main">
-  <section class="page-hero" style="padding-bottom:0;border-bottom:none;">
+  <section class="page-hero flush">
     <div class="wrap">
       <div class="eyebrow">Contact</div>
       <h1>Tell us about your event and we'll get back with a real proposal.</h1>
-      <p class="lede" style="max-width:54ch;">No endless forms. Name, event type, date and a message — we handle the rest.</p>
+      <p class="lede">No endless forms. Name, event type, date and a message — we handle the rest.</p>
     </div>
   </section>
 
-  <section style="border-bottom:none;">
+  <section class="no-rule">
     <div class="wrap">
-      <div class="grid-2" style="align-items:start;">
+      <div class="grid-2 top">
 
         <form class="card-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks">
           <input type="hidden" name="form-name" value="contact">
-          <p style="display:none;">
+          <p class="hp">
             <label>Don't fill this out: <input name="bot-field"></label>
           </p>
 
@@ -140,15 +140,15 @@
           <p class="form-note">We only use your details to reply to this enquiry. See our <a href="privacy.html">privacy policy</a>.</p>
         </form>
 
-        <div>
+        <div class="contact-direct">
           <div class="eyebrow">Direct contact</div>
-          <h2 style="font-size:1.8rem;">Christchurch, New Zealand</h2>
-          <p style="margin-bottom:28px;">Prefer to reach out directly?</p>
-          <div style="font-family:var(--font-mono);font-size:.95rem;line-height:2.2;">
-            <div><a href="mailto:info@southmedia.co.nz" style="color:var(--lime);">info@southmedia.co.nz</a></div>
+          <h2>Christchurch, New Zealand</h2>
+          <p>Prefer to reach out directly?</p>
+          <div class="contact-lines">
+            <div><a href="mailto:info@southmedia.co.nz" class="accent">info@southmedia.co.nz</a></div>
             <div><a href="tel:+64274539823">027 453 9823</a></div>
           </div>
-          <div style="display:flex;gap:14px;margin-top:24px;">
+          <div class="socials">
             <a href="https://www.instagram.com/southmedianz" target="_blank" rel="noopener" aria-label="South Media Group on Instagram" class="social-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ivory)" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="var(--ivory)" stroke="none"/></svg>
             </a>
@@ -156,11 +156,10 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ivory)" stroke-width="1.6"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5.5v3.5H8V21h3.5v-7.5h3l.5-3.5h-3.5V7.5c0-.8.7-1.5 1.5-1.5H15V3z"/></svg>
             </a>
           </div>
-          <div style="margin-top:32px;aspect-ratio:16/9;border:1px solid var(--line);overflow:hidden;">
+          <div class="map-embed">
             <iframe
               src="https://www.google.com/maps?q=Christchurch,New+Zealand&output=embed"
-              width="100%" height="100%" style="border:0;filter:invert(90%) hue-rotate(180deg) contrast(90%);"
-              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
               title="South Media Group location — Christchurch, New Zealand"></iframe>
           </div>
         </div>
