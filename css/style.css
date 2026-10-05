@@ -168,6 +168,15 @@ main{padding-top:var(--header-h);}
   .mixer{grid-template-columns:1fr;}
 }
 
+/* "Our group" — the group's own platforms, same channel look, 2 columns */
+.group-intro{max-width:60ch;margin:-6px 0 26px;}
+.mixer.mixer-2{grid-template-columns:repeat(2,1fr);}
+.channel h3{font-size:1.35rem;margin:14px 0 8px;}
+.channel[data-ch="group"]:hover{border-top-color:var(--gold);}
+@media (max-width:800px){
+  .mixer.mixer-2{grid-template-columns:1fr;}
+}
+
 /* ---------- Sections ---------- */
 section{padding:96px 0;border-bottom:1px solid var(--line);}
 section.tight{padding:64px 0;}
@@ -279,7 +288,7 @@ select option{background:var(--bg-card);}
 
 /* Footer */
 footer{padding:56px 0 34px;}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
 .footer-grid h4{font-family:var(--font-mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ivory-dim);margin-bottom:16px;}
 .footer-grid a,.footer-grid .foot-loc{display:block;text-decoration:none;color:var(--ivory-dim);font-size:.92rem;margin-bottom:10px;transition:color .15s ease;}
 .footer-grid a:hover{color:var(--lime);}
