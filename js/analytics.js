@@ -1,6 +1,6 @@
 // Google Analytics 4. Set GA_ID to the property's Measurement ID (G-XXXXXXXXXX) to enable.
 (function () {
-  var GA_ID = '';
+  var GA_ID = 'G-HW1CT0ZHM1';
   if (!GA_ID) return;
 
   var s = document.createElement('script');
