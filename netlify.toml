@@ -12,3 +12,14 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# Old site (Southmedia2023, Wix) URLs still indexed by Google -> new equivalents
+[[redirects]]
+  from = "/blank-6"
+  to = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/blank-5"
+  to = "/djs"
+  status = 301
