@@ -1,17 +1,7 @@
-// Google Analytics 4. Set GA_ID to the property's Measurement ID (G-XXXXXXXXXX) to enable.
-(function () {
-  var GA_ID = 'G-HW1CT0ZHM1';
-  if (!GA_ID) return;
+// Google Analytics 4 (G-HW1CT0ZHM1). gtag.js itself is loaded by the <script async> tag in each page's <head>.
+window.dataLayer = window.dataLayer || [];
+function gtag() { window.dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'G-HW1CT0ZHM1');
 
-  var s = document.createElement('script');
-  s.async = true;
-  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-  document.head.appendChild(s);
-
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function () { window.dataLayer.push(arguments); };
-  window.gtag('js', new Date());
-  window.gtag('config', GA_ID);
-
-  window.smgTrack = function (name, params) { window.gtag('event', name, params || {}); };
-})();
+window.smgTrack = function (name, params) { gtag('event', name, params || {}); };
