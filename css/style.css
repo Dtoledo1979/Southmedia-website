@@ -275,7 +275,9 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--lime);bo
 .form-note{font-size:.8rem;margin:14px 0 0;text-align:center;}
 .form-note a{color:var(--ivory);}
 textarea{resize:vertical;min-height:110px;}
-select option{background:var(--bg-card);}
+select{color-scheme:dark;}
+select option,select optgroup{background:var(--bg-card);color:var(--ivory);}
+select optgroup{font-style:normal;font-weight:700;color:var(--lime);}
 
 /* Final CTA band */
 .cta-band{
@@ -372,5 +374,15 @@ footer{padding:56px 0 34px;}
 .page-wed .faq summary::after,.page-wed .step .step-n{color:var(--gold);}
 
 /* Seasonal strip (home) */
-.season-strip{display:block;background:var(--lime);color:#0b0b0d;text-decoration:none;font-family:var(--font-mono);font-size:.82rem;letter-spacing:.04em;padding:14px 0;text-align:center;}
+.season-strip{display:block;overflow:hidden;white-space:nowrap;background:var(--lime);color:#0b0b0d;text-decoration:none;font-family:var(--font-mono);font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;padding:15px 0;}
 .season-strip:hover{background:var(--ivory);}
+.marquee-track{display:inline-flex;animation:marquee 32s linear infinite;will-change:transform;}
+.marquee-group{display:inline-flex;}
+.marquee-item{display:inline-flex;align-items:center;gap:22px;padding-right:22px;}
+.marquee-item i{font-style:normal;opacity:.7;}
+.season-strip:hover .marquee-track,.season-strip:focus-visible .marquee-track{animation-play-state:paused;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion: reduce){
+  .marquee-track{animation:none;}
+  .season-strip{text-align:center;}
+}
