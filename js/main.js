@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var href = a.getAttribute('href');
     if (href.indexOf('tel:') === 0) window.smgTrack('click_phone');
     else if (href.indexOf('mailto:') === 0) window.smgTrack('click_email');
+    else if (/wa\.me\//.test(href)) window.smgTrack('click_whatsapp');
     else if (/instagram\.com|facebook\.com/.test(href)) window.smgTrack('click_social', { link_url: href });
   });
 });
