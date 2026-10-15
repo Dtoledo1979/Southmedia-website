@@ -377,16 +377,18 @@ footer{padding:56px 0 34px;}
 
 /* Seasonal strip (home) */
 .season-strip{display:block;overflow:hidden;white-space:nowrap;background:var(--lime);color:#0b0b0d;text-decoration:none;font-family:var(--font-mono);font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;padding:15px 0;}
-.season-strip:hover{background:var(--ivory);}
+@media (hover:hover) and (pointer:fine){.season-strip:hover{background:var(--ivory);}}
 .marquee-track{display:inline-flex;animation:marquee 32s linear infinite;will-change:transform;}
 .marquee-group{display:inline-flex;}
 .marquee-item{display:inline-flex;align-items:center;gap:22px;padding-right:22px;}
 .marquee-item i{font-style:normal;opacity:.7;}
-.season-strip:hover .marquee-track,.season-strip:focus-visible .marquee-track{animation-play-state:paused;}
+/* Pause only where a real pointer can hover: on touch screens :hover sticks after a tap and froze the strip */
+@media (hover:hover) and (pointer:fine){.season-strip:hover .marquee-track{animation-play-state:paused;}}
+.season-strip:focus-visible .marquee-track{animation-play-state:paused;}
 @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+/* Reduced-motion users still get the announcement moving, at half speed (owner decision) */
 @media (prefers-reduced-motion: reduce){
-  .marquee-track{animation:none;}
-  .season-strip{text-align:center;}
+  .marquee-track{animation-duration:64s;}
 }
 
 /* Home hero photo */
